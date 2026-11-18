@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رزرو میز | NOIRÉ</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .reservation-page {
+            min-height: 100vh;
+            padding: 50px 20px;
+            background: #101010;
+            color: #fff;
+            font-family: Tahoma, sans-serif;
+        }
+
+        .reservation-container {
+            max-width: 650px;
+            margin: 35px auto;
+            padding: 45px;
+            background: #191919;
+            border: 1px solid rgba(212,175,106,.35);
+            border-radius: 12px;
+        }
+
+        .reservation-container h1 {
+            text-align: center;
+            color: #d4af6a;
+            margin-bottom: 12px;
+        }
+
+        .reservation-intro {
+            text-align: center;
+            color: #aaa;
+            margin-bottom: 35px;
+            line-height: 2;
+        }
+
+        .booking-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .booking-form .field {
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+        }
+
+        .booking-form label {
+            color: #d4af6a;
+            font-size: 14px;
+        }
+
+        .booking-form input,
+        .booking-form select,
+        .booking-form textarea {
+            width: 100%;
+            padding: 14px;
+            background: #252525;
+            border: 1px solid #444;
+            border-radius: 5px;
+            color: white;
+            font: inherit;
+            outline: none;
+        }
+
+        .booking-form input:focus,
+        .booking-form select:focus,
+        .booking-form textarea:focus {
+            border-color: #d4af6a;
+        }
+
+        .booking-form textarea {
+            resize: vertical;
+            min-height: 90px;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .booking-submit {
+            width: 100%;
+            padding: 16px;
+            background: #d4af6a;
+            color: #111;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .booking-submit:hover {
+            background: #f0d18e;
+            transform: translateY(-2px);
+        }
+
+        .back-home {
+            display: block;
+            text-align: center;
+            color: #d4af6a;
+            text-decoration: none;
+            margin-top: 25px;
+        }
+
+        .booking-message {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background: #263526;
+            color: #b9e5b9;
+            text-align: center;
+            border-radius: 5px;
+            line-height: 1.8;
+        }
+
+        @media(max-width: 600px) {
+            .reservation-container {
+                padding: 25px 18px;
+            }
+
+            .booking-form {
+                grid-template-columns: 1fr;
+            }
+
+            .full-width {
+                grid-column: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<main class="reservation-page">
+    <div class="reservation-container">
+
+        <h1 data-fa="رزرو میز" data-en="Reserve Your Table">
+            رزرو میز
+        </h1>
+
+        <p class="reservation-intro"
+           data-fa="لحظاتی خاص را در فضای لوکس NOIRÉ تجربه کنید."
+           data-en="Experience exceptional moments in the elegant atmosphere of NOIRÉ.">
+            لحظاتی خاص را در فضای لوکس NOIRÉ تجربه کنید.
+        </p>
+
+        <form class="booking-form" id="bookingForm">
+
+            <div class="field full-width">
+                <label data-fa="نام و نام خانوادگی" data-en="Full Name">نام و نام خانوادگی</label>
+                <input type="text" required
+                       placeholder="نام خود را وارد کنید"
+                       data-fa-placeholder="نام خود را وارد کنید"
+                       data-en-placeholder="Enter your name">
+            </div>
+
+            <div class="field">
+                <label data-fa="شماره تماس" data-en="Phone Number">شماره تماس</label>
+                <input type="tel" required
+                       placeholder="شماره تماس"
+                       data-fa-placeholder="شماره تماس"
+                       data-en-placeholder="Phone number">
+            </div>
+
+            <div class="field">
+                <label data-fa="تعداد مهمان‌ها" data-en="Guests">تعداد مهمان‌ها</label>
+                <select required>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7+</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label data-fa="تاریخ رزرو" data-en="Reservation Date">تاریخ رزرو</label>
+                <input type="date" id="bookingDate" required>
+            </div>
+
+            <div class="field">
+                <label data-fa="ساعت رزرو" data-en="Reservation Time">ساعت رزرو</label>
+                <select required>
+                    <option value="18:00">18:00</option>
+                    <option value="19:00">19:00</option>
+                    <option value="20:00">20:00</option>
+                    <option value="21:00">21:00</option>
+                    <option value="22:00">22:00</option>
+                </select>
+            </div>
+
+            <div class="field full-width">
+                <label data-fa="توضیحات بیشتر (اختیاری)"
+                       data-en="Additional Notes (Optional)">
+                    توضیحات بیشتر (اختیاری)
+                </label>
+                <textarea
+                    placeholder="درخواست خاصی دارید؟"
+                    data-fa-placeholder="درخواست خاصی دارید؟"
+                    data-en-placeholder="Any special requests?"></textarea>
+            </div>
+
+            <div class="full-width">
+                <button type="submit" class="booking-submit"
+                        data-fa="ثبت درخواست رزرو"
+                        data-en="SUBMIT RESERVATION">
+                    ثبت درخواست رزرو
+                </button>
+            </div>
+
+        </form>
+
+        <div class="booking-message" id="bookingMessage"
+             data-fa="درخواست شما ثبت شد. برای تأیید نهایی رزرو با رستوران تماس بگیرید."
+             data-en="Your request has been recorded. Please contact the restaurant for final confirmation.">
+        </div>
+
+        <a href="index.html" class="back-home"
+           data-fa="بازگشت به صفحه اصلی"
+           data-en="Back to Home">
+            بازگشت به صفحه اصلی
+        </a>
+
+    </div>
+</main>
+
+<script>
+    const bookingForm = document.getElementById("bookingForm");
+    const bookingDate = document.getElementById("bookingDate");
+
+    bookingDate.min = new Date().toLocaleDateString("en-CA");
+
+    bookingForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const message = document.getElementById("bookingMessage");
+        message.style.display = "block";
+        message.textContent = message.dataset[
+            document.documentElement.lang === "en" ? "en" : "fa"
+        ];
+
+        bookingForm.reset();
+    });
+</script>
+
+</body>
+</html>
