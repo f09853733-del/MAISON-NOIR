@@ -632,4 +632,5 @@ html[dir="rtl"] .footer-content {
 .footer-social .social-icons {
     justify-content: center;
     direction: ltr;
+    margin-top: 25px;
 }
