@@ -357,3 +357,40 @@ footer p {
         height: 260px;
     }
 }
+
+/* Persian language support */
+html[lang="fa"] body {
+    font-family: Tahoma, sans-serif;
+}
+
+html[dir="rtl"] .navbar {
+    direction: rtl;
+}
+
+html[dir="rtl"] .about,
+html[dir="rtl"] .menu-card {
+    text-align: right;
+}
+
+html[dir="rtl"] .hero-content,
+html[dir="rtl"] .reservation {
+    direction: rtl;
+}
+
+/* Language button */
+.language-btn {
+    background: transparent;
+    color: #d4af6a;
+    border: 1px solid #d4af6a;
+    padding: 9px 16px;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.language-btn:hover {
+    background: #d4af6a;
+    color: #111;
+}
+
