@@ -519,3 +519,8 @@ html[dir="rtl"] .chef-content {
         font-size: 29px;
     }
 }
+/* Persian Font - Vazirmatn */
+
+html[lang="fa"] body {
+    font-family: 'Vazirmatn', sans-serif;
+}
