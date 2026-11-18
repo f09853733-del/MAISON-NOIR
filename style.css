@@ -637,3 +637,17 @@ html[dir="rtl"] .footer-content {
     direction: ltr;
     margin: 25px auto 0;
 }
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-social .social-icons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto 0;
+}
