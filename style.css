@@ -524,3 +524,93 @@ html[dir="rtl"] .chef-content {
 html[lang="fa"] body {
     font-family: 'Vazirmatn', sans-serif;
 }
+/* LUXURY FOOTER */
+
+.site-footer {
+    background: #0b0b0b;
+    color: #fff;
+    padding: 70px 9% 25px;
+    border-top: 1px solid rgba(212,175,106,.3);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 50px;
+    padding-bottom: 45px;
+}
+
+.footer-brand .logo {
+    color: #d4af6a;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.footer-content h3 {
+    color: #d4af6a;
+    font-size: 17px;
+    margin-bottom: 22px;
+}
+
+.footer-content p {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 2.4;
+}
+
+.footer-brand p {
+    max-width: 280px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 13px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    width: 43px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d4af6a;
+    border-radius: 50%;
+    color: #d4af6a;
+    text-decoration: none;
+    font-size: 13px;
+    transition: .3s ease;
+}
+
+.social-icons a:hover {
+    background: #d4af6a;
+    color: #111;
+    transform: translateY(-4px);
+}
+
+.footer-bottom {
+    border-top: 1px solid #292929;
+    padding-top: 22px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #777;
+    font-size: 13px;
+}
+
+html[dir="rtl"] .footer-content {
+    direction: rtl;
+    text-align: right;
+}
+
+@media(max-width: 700px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .site-footer {
+        padding: 50px 7% 20px;
+    }
+}
