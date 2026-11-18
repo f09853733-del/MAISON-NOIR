@@ -626,11 +626,14 @@ html[dir="rtl"] .footer-content {
     }
 }
 .footer-social {
-    text-align: center;
+    text-align: center !important;
 }
 
 .footer-social .social-icons {
-    justify-content: center;
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    width: 100%;
     direction: ltr;
-    margin-top: 25px;
+    margin: 25px auto 0;
 }
