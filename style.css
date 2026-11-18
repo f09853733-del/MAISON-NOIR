@@ -447,4 +447,75 @@ html[dir="rtl"] .reservation {
         grid-row: span 1;
     }
 }
+/* CHEF SECTION */
 
+.chef {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+    padding: 110px 9%;
+    background: #151515;
+    color: #fff;
+}
+
+.chef-image {
+    min-height: 480px;
+    position: relative;
+    background: linear-gradient(145deg, #29231b, #111);
+    border: 1px solid rgba(212,175,106,.4);
+}
+
+.chef-image-overlay {
+    position: absolute;
+    inset: 15px;
+    border: 1px solid rgba(212,175,106,.25);
+}
+
+.chef-content {
+    max-width: 550px;
+}
+
+.chef-content h2 {
+    font-size: 38px;
+    line-height: 1.8;
+    color: #d4af6a;
+    margin: 25px 0;
+}
+
+.chef-content p {
+    color: #b8b8b8;
+    font-size: 16px;
+    line-height: 2.5;
+}
+
+.chef-signature {
+    color: #d4af6a;
+    letter-spacing: 3px;
+    font-size: 12px;
+    margin-top: 35px;
+}
+
+html[dir="rtl"] .chef {
+    direction: rtl;
+}
+
+html[dir="rtl"] .chef-content {
+    text-align: right;
+}
+
+@media(max-width: 700px) {
+    .chef {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 70px 6%;
+    }
+
+    .chef-image {
+        min-height: 350px;
+    }
+
+    .chef-content h2 {
+        font-size: 29px;
+    }
+}
