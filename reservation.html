@@ -239,6 +239,27 @@
 <script>
     const bookingForm = document.getElementById("bookingForm");
     const bookingDate = document.getElementById("bookingDate");
+    let currentLanguage = "fa";
+
+function toggleLanguage() {
+    currentLanguage = currentLanguage === "fa" ? "en" : "fa";
+
+    document.documentElement.lang = currentLanguage;
+    document.documentElement.dir = currentLanguage === "fa" ? "rtl" : "ltr";
+
+    document.querySelectorAll("[data-fa][data-en]").forEach(element => {
+        element.textContent = element.dataset[currentLanguage];
+    });
+
+    document.querySelectorAll("[data-fa-placeholder][data-en-placeholder]").forEach(element => {
+        element.placeholder = element.dataset[
+            currentLanguage === "fa" ? "faPlaceholder" : "enPlaceholder"
+        ];
+    });
+
+    document.getElementById("languageToggle").textContent =
+        currentLanguage === "fa" ? "EN" : "FA";
+}
 
     bookingDate.min = new Date().toLocaleDateString("en-CA");
 
