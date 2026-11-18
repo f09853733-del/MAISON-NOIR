@@ -70,3 +70,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+let currentLanguage = "fa";
+
+function toggleLanguage() {
+    currentLanguage = currentLanguage === "fa" ? "en" : "fa";
+
+    document.documentElement.lang = currentLanguage;
+    document.documentElement.dir = currentLanguage === "fa" ? "rtl" : "ltr";
+
+    document.querySelectorAll("[data-fa][data-en]").forEach(element => {
+        element.textContent = element.dataset[currentLanguage];
+    });
+
+    document.getElementById("languageToggle").textContent =
+        currentLanguage === "fa" ? "EN" : "FA";
+}
