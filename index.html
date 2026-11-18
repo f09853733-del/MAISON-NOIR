@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -15,15 +16,20 @@
 <body>
 
     <header class="header">
-        <a href="#" class="logo">NOIRÉ<span>.</span></a>
+       
+    <a href="#" class="logo">NOIRÉ<span>.</span></a>
+        <button id="languageToggle" class="language-btn" onclick="toggleLanguage()">
+    EN
+</button>
 
-        <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#about">Our Story</a>
-            <a href="#menu">Menu</a>
-            <a href="#reservation">Reservation</a>
-            <a href="#contact">Contact</a>
-        </nav>
+     
+<nav class="navbar">
+    <a href="#home" data-fa="خانه" data-en="Home">خانه</a>
+    <a href="#about" data-fa="داستان ما" data-en="Our Story">داستان ما</a>
+    <a href="#menu" data-fa="منو" data-en="Menu">منو</a>
+    <a href="#reservation" data-fa="رزرو میز" data-en="Reservation">رزرو میز</a>
+    <a href="#contact" data-fa="تماس با ما" data-en="Contact">تماس با ما</a>
+</nav>
 
         <a href="#reservation" class="header-btn">BOOK A TABLE</a>
     </header>
