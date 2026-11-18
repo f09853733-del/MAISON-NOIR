@@ -263,6 +263,11 @@ function toggleLanguage() {
 
     bookingDate.min = new Date().toLocaleDateString("en-CA");
 
+document.querySelectorAll("[data-fa-placeholder][data-en-placeholder]").forEach(element => {
+    element.placeholder = element.dataset.faPlaceholder;
+});
+
+    
     bookingForm.addEventListener("submit", function(event) {
         event.preventDefault();
 
