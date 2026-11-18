@@ -625,3 +625,11 @@ html[dir="rtl"] .footer-content {
         padding: 50px 7% 20px;
     }
 }
+.footer-social {
+    text-align: center;
+}
+
+.footer-social .social-icons {
+    justify-content: center;
+    direction: ltr;
+}
