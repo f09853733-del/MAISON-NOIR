@@ -238,6 +238,12 @@ a {
     background-position: center;
     background-repeat: no-repeat;
 }
+.menu-dessert {
+    background-image: url("images/menu-chocolate-dessert.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 .menu-card h3 {
     font-family: 'Cormorant Garamond', serif;
