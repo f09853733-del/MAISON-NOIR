@@ -450,6 +450,40 @@ html[dir="rtl"] .reservation {
     background-position: center;
     background-repeat: no-repeat;
 }
+.gallery-seafood {
+    background-image: url("images/gallery-seafood.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery-table {
+    background-image: url("images/gallery-table-setting.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery-interior {
+    background-image: url("images/hero-interior.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery-dessert {
+    background-image: url("images/menu-chocolate-dessert.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery-dining {
+    background-image: url("images/reservation-interior.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 @media (max-width: 700px) {
     .gallery {
