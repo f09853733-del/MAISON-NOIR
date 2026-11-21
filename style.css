@@ -232,6 +232,12 @@ a {
     background-position: center;
     background-repeat: no-repeat;
 }
+.menu-steak {
+    background-image: url("images/menu-premium-steak.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 .menu-card h3 {
     font-family: 'Cormorant Garamond', serif;
