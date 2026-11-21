@@ -268,7 +268,7 @@ a {
     text-align: center;
     background:
         linear-gradient(rgba(0,0,0,0.88), rgba(0,0,0,0.88)),
-        url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=85') center/cover;
+url('images/reservation-interior.jpg') center/cover;
 }
 
 .reservation .primary-btn {
