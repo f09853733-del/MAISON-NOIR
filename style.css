@@ -709,3 +709,10 @@ html[dir="rtl"] .footer-content {
     align-items: center;
     margin: 25px auto 0;
 }
+/* RESERVATION PAGE BACKGROUND */
+.reservation-page {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.88)),
+        url("images/reservation-interior.jpg") center/cover no-repeat;
+}
