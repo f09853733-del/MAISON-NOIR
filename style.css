@@ -520,7 +520,7 @@ html[dir="rtl"] .reservation {
 .chef-image {
     min-height: 480px;
     position: relative;
-    background: linear-gradient(145deg, #29231b, #111);
+   background: url("images/chef-portrait.jpg") center 30% / cover no-repeat;
     border: 1px solid rgba(212,175,106,.4);
 }
 
